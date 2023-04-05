@@ -1,0 +1,19 @@
+{
+  "name": "bot_monitor",
+  "version": "1.0.0",
+  "description": "This project is a tool to monitor CDP traffic between a bot and a fully fledge browser. ",
+  "main": "proxy.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy": "^1.18.1",
+    "http-proxy-middleware": "^2.0.6",
+    "ws": "^8.13.0",
+    "websocket": "^1.0.34"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yohann Sillam",
+  "license": "ISC"
+}
