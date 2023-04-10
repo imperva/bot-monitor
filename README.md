@@ -2,7 +2,7 @@
 
 This project is a tool to monitor CDP traffic between a bot and a fully fledge browser in order to filter meaningful activities and to understand the bot behavior.
 This tool creates a new local proxy with a separate port per each new Chrome instance created by the bot.
-One of the advantage of this project is that it's dynamically creating a proxy that listens to the port chosen by the browser. 
+One of the advantages of this project is that it's dynamically creating a proxy that listens to the port chosen by the browser. 
 
 ## Prerequisite
 - Supported on Windows 10
