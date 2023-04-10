@@ -15,7 +15,7 @@ for (var i = 0; i < process_createAPI.length; i++){
         Interceptor.attach(create_process_addr, {
             onEnter: function(args){
                 var app_name = Memory.readUtf16String(args[1])
-                var command_line = Memory.readUtf16String(args[2])                var reg1 = /^[^\x20]+(chrome|edge|chromium)\.exe/
+                var command_line = Memory.readUtf16String(args[2])
                 var reg1 = /^[^\x20]+(chrome|edge|chromium)\.exe/
                 var reg2 = /^\x22[^\x22]+(chrome|edge|chromium)\.exe[\x22\x20]/
                 if (reg1.test(command_line) || reg2.test(command_line) ){
