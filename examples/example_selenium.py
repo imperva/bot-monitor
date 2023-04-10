@@ -10,9 +10,9 @@ def main():
  
     driver = webdriver.Chrome('chromedriver.exe')
     
-    time.sleep(3)
-    driver.gte('https://www.example.com')
-    time.sleep(10)
+    time.sleep(1)
+    driver.get('https://www.example.com')
+    time.sleep(1)
     driver.close()   
  
  
