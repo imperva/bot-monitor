@@ -5,13 +5,13 @@ This tool creates a new local proxy with a separate port per each new Chrome ins
 One of the advantage of this project is that it's dynamically creating a proxy that listens to the port chosen by the browser. 
 
 ## Prerequisite
-- Tested on Windows 10
+- Supported on Windows 10
 - Node (tested on v14.15.0)
 - Python 3 (tested on 3.7.9) with pip
 
 ## Installation
-
-Installation of NPM libraries
+- Clone of the repo
+- Installation of NPM libraries
 ```shell
 > npm install 
 ```
