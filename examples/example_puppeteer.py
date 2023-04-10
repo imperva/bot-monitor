@@ -10,9 +10,9 @@ async def main():
  
     browser = await launch({"headless":False})
     page = await browser.newPage()
-    time.sleep(3)
+    time.sleep(1)
     await page.goto('about:blank')
-    time.sleep(1000)
+    time.sleep(1)
     await browser.close()   
  
 asyncio.run(main())   
