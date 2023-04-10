@@ -29,7 +29,7 @@ def get_free_port(port=1024, max_port=65535):
 
 def stderr_handler(p, port_websocket, arguments):
     global NEW_PORT
-    logging.info("New port" + str(port_websocket))
+    logging.info("Proxy port" + str(port_websocket))
     for line in p.stderr:
         if "127.0.0.1" in line.decode("utf-8").rstrip():
             NEW_PORT = int(line.decode("utf-8").rstrip().split("127.0.0.1:")[-1].split("/")[0])
@@ -60,10 +60,7 @@ def launch_browser(browser_path, arguments, webclient_port):
     if not sys.platform.startswith('win'):
         exit(-1)
 
-    print(arguments)
     p = subprocess.Popen([browser_path, *arguments], stdout=sys.stdout, stderr=subprocess.PIPE, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
-
-
 
     stderr_thread = threading.Thread(target=stderr_handler, args=(p, webclient_port, arguments))
 
