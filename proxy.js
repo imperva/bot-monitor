@@ -147,9 +147,9 @@ const wsProxy = (clientSocket, req) => {
 
     targetSocket.on('open', async () => {
         console.log("target connected");
-        for (let i = 0; i < clientMessageQueue.length; i++) {
+        while (clientMessageQueue.length != 0) {
             handleClientMessage(clientMessageQueue.shift());
-            await sleep(100);
+            await sleep(10);
         }
     });
 
